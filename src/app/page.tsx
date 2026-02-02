@@ -111,8 +111,16 @@ export default function Home() {
         <p className="text-terminal-dim mb-4">
           Thoughts on AI, dev tools, and building things fast.
         </p>
-        <div className="space-y-2">
-          <p className="text-terminal-dim text-sm">Coming soon...</p>
+        <div className="space-y-4">
+          <a href="/blog/openclaw-setup" className="block group">
+            <h3 className="text-terminal-text group-hover:text-terminal-highlight">
+              I Run an AI Agent on a Raspberry Pi
+            </h3>
+            <p className="text-terminal-dim text-sm mt-1">
+              It prototypes while I sleep. Here's my setup.
+            </p>
+            <p className="text-terminal-dim/50 text-xs mt-1">Feb 2, 2026</p>
+          </a>
         </div>
       </Section>
 
