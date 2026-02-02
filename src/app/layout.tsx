@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 export const metadata: Metadata = {
   title: 'Hammid Olagunju | Software Engineer',
@@ -24,7 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-terminal-bg text-terminal-text font-mono antialiased">
-        {children}
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
