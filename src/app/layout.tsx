@@ -2,17 +2,17 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Akande Hammid Olagunju | Software Engineer',
-  description: 'Software Engineer. Lagos → Canada → UK. I build things.',
+  title: 'Hammid Olagunju | Software Engineer',
+  description: 'Software Engineer. Based in the UK, available worldwide. I build things.',
   openGraph: {
-    title: 'Akande Hammid Olagunju | Software Engineer',
-    description: 'Software Engineer. Lagos → Canada → UK. I build things.',
+    title: 'Hammid Olagunju | Software Engineer',
+    description: 'Software Engineer. Based in the UK, available worldwide. I build things.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Akande Hammid Olagunju | Software Engineer',
-    description: 'Software Engineer. Lagos → Canada → UK. I build things.',
+    title: 'Hammid Olagunju | Software Engineer',
+    description: 'Software Engineer. Based in the UK, available worldwide. I build things.',
   },
 }
 

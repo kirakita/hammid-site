@@ -65,7 +65,7 @@ export default function Home() {
           {loaded ? <TypingText text="Hammid Olagunju" /> : 'Hammid Olagunju'}
         </h1>
         <p className="text-terminal-dim text-lg">
-          Software Engineer. Lagos → Canada → UK.
+          Software Engineer. Based in the UK, available worldwide.
         </p>
         <p className="text-terminal-text mt-2">I build things.</p>
       </header>
@@ -73,8 +73,8 @@ export default function Home() {
       {/* About */}
       <Section title="about">
         <div className="space-y-3 text-terminal-dim">
-          <p className="prompt">Lead Software Engineer at <span className="text-terminal-text">Virgin Media O2</span></p>
-          <p className="prompt">Backend-focused. TypeScript ecosystem.</p>
+          <p className="prompt">Senior Software Engineer at <span className="text-terminal-text">Virgin Media O2</span></p>
+          <p className="prompt">Versatile across stacks. Currently into AI & distributed systems.</p>
           <p className="prompt">Part-time consulting — leading engineering teams</p>
           <p className="prompt">Nigerian 🇳🇬 | Based in UK 🇬🇧</p>
         </div>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-6 text-sm">
           <Link href="https://github.com/princeede">GitHub</Link>
           <Link href="https://linkedin.com/in/abdul-hammid-olagunju">LinkedIn</Link>
-          <Link href="https://twitter.com/hammidolagunju">Twitter</Link>
+          <Link href="https://twitter.com/aholagunju">Twitter</Link>
           <Link href="mailto:hammid@aholagunju.com">Email</Link>
         </div>
       </Section>
