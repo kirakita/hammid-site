@@ -62,7 +62,7 @@ export default function Home() {
       <header className="mb-16">
         <div className="text-terminal-dim text-sm mb-2">guest@aholagunju.com:~$</div>
         <h1 className="text-2xl md:text-3xl font-bold mb-4">
-          {loaded ? <TypingText text="Hammid Akande" /> : 'Hammid Akande'}
+          {loaded ? <TypingText text="Hammid Olagunju" /> : 'Hammid Olagunju'}
         </h1>
         <p className="text-terminal-dim text-lg">
           Software Engineer. Lagos → Canada → UK.
@@ -129,7 +129,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-16 pt-8 border-t border-terminal-dim/30">
         <p className="text-terminal-dim text-sm">
-          © {new Date().getFullYear()} Hammid Akande. Built with Next.js.
+          © {new Date().getFullYear()} Hammid Olagunju. Built with Next.js.
         </p>
       </footer>
     </main>
