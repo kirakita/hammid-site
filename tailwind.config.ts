@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         terminal: {
-          bg: '#0a0a0a',
-          text: '#00ff00',
-          dim: '#00aa00',
-          highlight: '#00ffaa',
-          cursor: '#00ff00',
+          bg: 'var(--bg)',
+          text: 'var(--text)',
+          dim: 'var(--dim)',
+          highlight: 'var(--highlight)',
+          border: 'var(--border)',
         },
       },
       fontFamily: {
