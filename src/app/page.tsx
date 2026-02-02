@@ -60,7 +60,7 @@ export default function Home() {
     <main className="max-w-2xl mx-auto px-6 py-16">
       {/* Header */}
       <header className="mb-16">
-        <div className="text-terminal-dim text-sm mb-2">guest@hammid.dev:~$</div>
+        <div className="text-terminal-dim text-sm mb-2">guest@aholagunju.com:~$</div>
         <h1 className="text-2xl md:text-3xl font-bold mb-4">
           {loaded ? <TypingText text="Hammid Akande" /> : 'Hammid Akande'}
         </h1>
@@ -122,7 +122,7 @@ export default function Home() {
           <Link href="https://github.com/hammid">GitHub</Link>
           <Link href="https://linkedin.com/in/hammidakande">LinkedIn</Link>
           <Link href="https://twitter.com/hammidakande">Twitter</Link>
-          <Link href="mailto:hello@hammid.dev">Email</Link>
+          <Link href="mailto:hello@aholagunju.com">Email</Link>
         </div>
       </Section>
 

@@ -2,16 +2,16 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Hammid Akande | Software Engineer',
+  title: 'Akande Hammid Olagunju | Software Engineer',
   description: 'Software Engineer. Lagos → Canada → UK. I build things.',
   openGraph: {
-    title: 'Hammid Akande | Software Engineer',
+    title: 'Akande Hammid Olagunju | Software Engineer',
     description: 'Software Engineer. Lagos → Canada → UK. I build things.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hammid Akande | Software Engineer',
+    title: 'Akande Hammid Olagunju | Software Engineer',
     description: 'Software Engineer. Lagos → Canada → UK. I build things.',
   },
 }
