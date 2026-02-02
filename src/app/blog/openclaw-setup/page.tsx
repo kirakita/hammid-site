@@ -1,8 +1,35 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+import { ShareButtons } from '@/components/ShareButtons'
 
-export const metadata = {
-  title: 'I Run an AI Agent on a Raspberry Pi | Hammid Olagunju',
-  description: 'It prototypes while I sleep. Here\'s my setup.',
+const ARTICLE_URL = 'https://aholagunju.com/blog/openclaw-setup'
+const ARTICLE_TITLE = 'I Run an AI Agent on a Raspberry Pi. It Prototypes While I Sleep.'
+const ARTICLE_DESCRIPTION = 'How I set up OpenClaw on a £50 computer for 24/7 AI assistance — with proper isolation for security.'
+const PUBLISH_DATE = '2026-02-02'
+
+export const metadata: Metadata = {
+  title: `${ARTICLE_TITLE} | Hammid Olagunju`,
+  description: ARTICLE_DESCRIPTION,
+  keywords: ['AI agent', 'OpenClaw', 'Raspberry Pi', 'automation', 'Claude', 'personal assistant', 'developer tools'],
+  authors: [{ name: 'Hammid Olagunju', url: 'https://aholagunju.com' }],
+  openGraph: {
+    title: ARTICLE_TITLE,
+    description: ARTICLE_DESCRIPTION,
+    type: 'article',
+    publishedTime: PUBLISH_DATE,
+    authors: ['Hammid Olagunju'],
+    url: ARTICLE_URL,
+    siteName: 'Hammid Olagunju',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: ARTICLE_TITLE,
+    description: ARTICLE_DESCRIPTION,
+    creator: '@aholagunju',
+  },
+  alternates: {
+    canonical: ARTICLE_URL,
+  },
 }
 
 export default function OpenClawArticle() {
@@ -13,9 +40,18 @@ export default function OpenClawArticle() {
           ← back
         </Link>
         <h1 className="text-2xl md:text-3xl font-bold mt-6 mb-4">
-          I Run an AI Agent on a Raspberry Pi. It Prototypes While I Sleep.
+          {ARTICLE_TITLE}
         </h1>
-        <p className="text-terminal-dim text-sm">February 2, 2026</p>
+        <div className="flex flex-wrap items-center gap-4 text-terminal-dim text-sm mb-6">
+          <time dateTime={PUBLISH_DATE}>February 2, 2026</time>
+          <span>·</span>
+          <span>5 min read</span>
+        </div>
+        <ShareButtons 
+          url={ARTICLE_URL} 
+          title={ARTICLE_TITLE} 
+          description={ARTICLE_DESCRIPTION}
+        />
       </header>
 
       <article className="space-y-6 text-terminal-dim leading-relaxed">
@@ -53,7 +89,7 @@ export default function OpenClawArticle() {
           Clean separation. I control the boundary.
         </p>
 
-        <div className="my-8 p-4 border border-terminal-dim/30 rounded">
+        <div className="my-8 p-4 border border-terminal-dim rounded" role="figure" aria-label="Isolation setup diagram">
           <p className="text-terminal-dim text-sm mb-4">// isolation setup</p>
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
@@ -81,7 +117,7 @@ export default function OpenClawArticle() {
         <h2 className="text-terminal-text text-xl font-bold mt-10 mb-4">The Tool</h2>
 
         <p>
-          The tool is called <a href="https://github.com/openclaw/openclaw" className="text-terminal-highlight hover:underline">OpenClaw</a> — open source, connects Claude to messaging apps and file systems. Still early, still rough edges. But the core idea works: an AI that can actually <em>do things</em>, not just talk about them.
+          The tool is called <a href="https://github.com/openclaw/openclaw" className="text-terminal-highlight hover:underline" rel="noopener noreferrer" target="_blank">OpenClaw</a> — open source, connects Claude to messaging apps and file systems. Still early, still rough edges. But the core idea works: an AI that can actually <em>do things</em>, not just talk about them.
         </p>
 
         <h2 className="text-terminal-text text-xl font-bold mt-10 mb-4">What I Use It For</h2>
@@ -109,10 +145,17 @@ export default function OpenClawArticle() {
         </p>
       </article>
 
-      <footer className="mt-16 pt-8 border-t border-terminal-dim/30">
-        <Link href="/" className="text-terminal-highlight hover:underline">
-          ← back to home
-        </Link>
+      <footer className="mt-12 pt-8 border-t border-terminal-dim">
+        <ShareButtons 
+          url={ARTICLE_URL} 
+          title={ARTICLE_TITLE} 
+          description={ARTICLE_DESCRIPTION}
+        />
+        <div className="mt-8">
+          <Link href="/" className="text-terminal-highlight hover:underline">
+            ← back to home
+          </Link>
+        </div>
       </footer>
     </main>
   )
