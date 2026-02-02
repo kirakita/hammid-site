@@ -1,13 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import { ShareButtons } from '@/components/ShareButtons'
 
-// Feature image: Raspberry Pi Zero W macro by Gavin Allanwood (Unsplash)
-const FEATURE_IMAGE = 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=1200&q=80'
-
 const ARTICLE_URL = 'https://aholagunju.com/blog/openclaw-setup'
-const ARTICLE_TITLE = 'I Run an AI Agent on a Raspberry Pi. It Prototypes While I Sleep.'
+const ARTICLE_TITLE = 'How I Set Up OpenClaw on a Raspberry Pi — It Prototypes While I Sleep'
 const ARTICLE_DESCRIPTION = 'How I set up OpenClaw on a £50 computer for 24/7 AI assistance — with proper isolation for security.'
 const PUBLISH_DATE = '2026-02-02'
 
@@ -24,14 +20,12 @@ export const metadata: Metadata = {
     authors: ['Hammid Olagunju'],
     url: ARTICLE_URL,
     siteName: 'Hammid Olagunju',
-    images: [{ url: FEATURE_IMAGE, width: 1200, height: 630, alt: 'Raspberry Pi circuit board macro' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: ARTICLE_TITLE,
     description: ARTICLE_DESCRIPTION,
     creator: '@aholagunju',
-    images: [FEATURE_IMAGE],
   },
   alternates: {
     canonical: ARTICLE_URL,
@@ -58,21 +52,6 @@ export default function OpenClawArticle() {
           title={ARTICLE_TITLE} 
           description={ARTICLE_DESCRIPTION}
         />
-        
-        {/* Feature image */}
-        <div className="mt-8 -mx-6 md:mx-0 md:rounded-lg overflow-hidden">
-          <Image
-            src={FEATURE_IMAGE}
-            alt="Raspberry Pi circuit board macro - the hardware running my AI agent"
-            width={1200}
-            height={630}
-            className="w-full h-auto"
-            priority
-          />
-          <p className="text-xs text-terminal-dim mt-2 text-center">
-            Photo by <a href="https://unsplash.com/@gavla" className="hover:text-terminal-text" target="_blank" rel="noopener noreferrer">Gavin Allanwood</a> on Unsplash
-          </p>
-        </div>
       </header>
 
       <article className="space-y-6 text-terminal-dim leading-relaxed">
@@ -138,7 +117,7 @@ export default function OpenClawArticle() {
         <h2 className="text-terminal-text text-xl font-bold mt-10 mb-4">The Tool</h2>
 
         <p>
-          The tool is called <a href="https://github.com/openclaw/openclaw" className="text-terminal-highlight hover:underline" rel="noopener noreferrer" target="_blank">OpenClaw</a> — open source, connects Claude to messaging apps and file systems. Still early, still rough edges. But the core idea works: an AI that can actually <em>do things</em>, not just talk about them.
+          The tool is called <a href="https://openclaw.ai/" className="text-terminal-highlight hover:underline" rel="noopener noreferrer" target="_blank">OpenClaw</a> — open source, connects Claude to messaging apps and file systems. Still early, still rough edges. But the core idea works: an AI that can actually <em>do things</em>, not just talk about them.
         </p>
 
         <h2 className="text-terminal-text text-xl font-bold mt-10 mb-4">What I Use It For</h2>
