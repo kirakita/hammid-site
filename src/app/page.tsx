@@ -119,10 +119,10 @@ export default function Home() {
       {/* Connect */}
       <Section title="connect">
         <div className="flex flex-wrap gap-6 text-sm">
-          <Link href="https://github.com/hammid">GitHub</Link>
-          <Link href="https://linkedin.com/in/hammidakande">LinkedIn</Link>
-          <Link href="https://twitter.com/hammidakande">Twitter</Link>
-          <Link href="mailto:hello@aholagunju.com">Email</Link>
+          <Link href="https://github.com/princeede">GitHub</Link>
+          <Link href="https://linkedin.com/in/abdul-hammid-olagunju">LinkedIn</Link>
+          <Link href="https://twitter.com/hammidolagunju">Twitter</Link>
+          <Link href="mailto:hammid@aholagunju.com">Email</Link>
         </div>
       </Section>
 
