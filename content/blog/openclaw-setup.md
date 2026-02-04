@@ -24,7 +24,7 @@ Honestly? Isolation. I didn't want to give an AI agent full access to my main ma
 Clean separation. I control the boundary.
 
 **My MacBook:**
-- 🔐 Bank credentials
+- 🔐 Sensitive credentials
 - 🔑 SSH keys
 - 📧 Personal email
 - 🗂️ Private files
