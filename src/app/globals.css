@@ -91,3 +91,110 @@ a:hover {
 .text-terminal-dim { color: var(--dim); }
 .text-terminal-highlight { color: var(--highlight); }
 .border-terminal-dim { border-color: var(--border); }
+
+/* Prose styles for markdown content */
+.prose-terminal {
+  color: var(--dim);
+  line-height: 1.75;
+}
+
+.prose-terminal p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-terminal strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prose-terminal em {
+  font-style: italic;
+}
+
+.prose-terminal h2 {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-terminal h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-terminal a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.prose-terminal a:hover {
+  text-decoration: underline;
+}
+
+.prose-terminal ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prose-terminal ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-terminal ul li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--dim);
+}
+
+.prose-terminal ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-terminal ol li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-terminal blockquote {
+  border-left: 2px solid var(--dim);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--highlight);
+  font-style: italic;
+}
+
+.prose-terminal code {
+  background-color: var(--border);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.prose-terminal pre {
+  background-color: var(--border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose-terminal pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-terminal hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}

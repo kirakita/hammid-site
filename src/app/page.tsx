@@ -38,7 +38,7 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
   </section>
 )
 
-const Link = ({ href, children }: { href: string; children: React.ReactNode }) => (
+const ExternalLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
     target="_blank"
@@ -48,6 +48,17 @@ const Link = ({ href, children }: { href: string; children: React.ReactNode }) =
     {children}
   </a>
 )
+
+// Blog posts data - imported at build time via server component would be cleaner,
+// but keeping it simple for now. Update this array when adding new posts.
+const posts = [
+  {
+    slug: 'openclaw-setup',
+    title: 'How I Set Up OpenClaw on a Raspberry Pi',
+    description: 'It prototypes while I sleep. Here\'s my setup.',
+    date: '2026-02-02',
+  },
+]
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false)
@@ -88,7 +99,7 @@ export default function Home() {
         <div className="space-y-6">
           <div>
             <h3 className="text-terminal-text font-bold">
-              <Link href="https://dimmah.com">Dimmah</Link>
+              <ExternalLink href="https://dimmah.com">Dimmah</ExternalLink>
             </h3>
             <p className="text-terminal-dim text-sm mt-1">
               Full-service software agency. Web, mobile, cloud, AI.
@@ -112,25 +123,33 @@ export default function Home() {
           Thoughts on AI, dev tools, and building things fast.
         </p>
         <div className="space-y-4">
-          <a href="/blog/openclaw-setup" className="block group">
-            <h3 className="text-terminal-text group-hover:text-terminal-highlight">
-              I Run an AI Agent on a Raspberry Pi
-            </h3>
-            <p className="text-terminal-dim text-sm mt-1">
-              It prototypes while I sleep. Here's my setup.
-            </p>
-            <p className="text-terminal-dim/50 text-xs mt-1">Feb 2, 2026</p>
-          </a>
+          {posts.map(post => (
+            <a key={post.slug} href={`/blog/${post.slug}`} className="block group">
+              <h3 className="text-terminal-text group-hover:text-terminal-highlight">
+                {post.title}
+              </h3>
+              <p className="text-terminal-dim text-sm mt-1">
+                {post.description}
+              </p>
+              <p className="text-terminal-dim/50 text-xs mt-1">
+                {new Date(post.date).toLocaleDateString('en-GB', { 
+                  year: 'numeric', 
+                  month: 'short', 
+                  day: 'numeric' 
+                })}
+              </p>
+            </a>
+          ))}
         </div>
       </Section>
 
       {/* Connect */}
       <Section title="connect">
         <div className="flex flex-wrap gap-6 text-sm">
-          <Link href="https://github.com/princeede">GitHub</Link>
-          <Link href="https://linkedin.com/in/abdul-hammid-olagunju">LinkedIn</Link>
-          <Link href="https://twitter.com/aholagunju">Twitter</Link>
-          <Link href="mailto:hammid@aholagunju.com">Email</Link>
+          <ExternalLink href="https://github.com/princeede">GitHub</ExternalLink>
+          <ExternalLink href="https://linkedin.com/in/abdul-hammid-olagunju">LinkedIn</ExternalLink>
+          <ExternalLink href="https://twitter.com/aholagunju">Twitter</ExternalLink>
+          <ExternalLink href="mailto:hammid@aholagunju.com">Email</ExternalLink>
         </div>
       </Section>
 
